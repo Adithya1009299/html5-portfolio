@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Accessible Personal Portfolio Website">
+    <meta name="keywords" content="Portfolio, HTML5, Accessibility, Student">
+    <meta name="author" content="Prashanthini">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Portfolio</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            line-height:1.6;
+        }
+
+        header, nav, main, section, footer{
+            padding:20px;
+        }
+
+        header{
+            background:#f4f4f4;
+            text-align:center;
+        }
+
+        nav ul{
+            list-style:none;
+            padding:0;
+            display:flex;
+            justify-content:center;
+            gap:20px;
+        }
+
+        nav a{
+            text-decoration:none;
+        }
+
+        form{
+            max-width:500px;
+        }
+
+        label{
+            display:block;
+            margin-top:10px;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:8px;
+        }
+
+        button{
+            margin-top:10px;
+            padding:10px 15px;
+        }
+
+        footer{
+            text-align:center;
+            background:#f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+
+<header role="banner">
+    <h1>My Portfolio</h1>
+
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <article>
+            <p>
+                I am a student passionate about Web Development,
+                Artificial Intelligence and Data Science.
+            </p>
+        </article>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+
+        <article>
+            <h3>Fake News Detection</h3>
+            <p>Machine Learning based project for identifying fake news.</p>
+        </article>
+
+        <article>
+            <h3>Portfolio Website</h3>
+            <p>Accessible website built using semantic HTML5.</p>
+        </article>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Me</h2>
+
+        <form aria-label="Contact Form">
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer role="contentinfo">
+    <p>&copy; 2026 Personal Portfolio. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
